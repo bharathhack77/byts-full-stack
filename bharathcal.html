@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+</head>
+<body>
+    <h1 ><strong> <i>CALCULATOR</i></strong></h1>
+    <style>
+  .calculator {
+    border: 3px solid hsla(244, 100%, 49%, 0); /* Ithu thaan border */
+    padding: 10px;
+    width: 220px;
+    background-color:rgb(226, 226, 226);
+    border-radius: 10px;
+  }
+</style>
+
+
+
+
+<div class="calculator">
+  <input type="text" id="display" disabled />
+ 
+  <br>
+  <button style="background-color:blue;" class="btn" onclick="appendValue('7')">7</button>
+  <button style="background-color:blue;"  class="btn" onclick="appendValue('8')">8</button>
+  <button style="background-color:blue;"  class="btn" onclick="appendValue('9')">9</button>
+  <button style="background-color:blue;"  class="btn" onclick="appendValue('/')">/</button><br>
+  <button style="background-color:blue;"  class="btn" onclick="appendValue('4')">4</button>
+  <button style="background-color:blue;"  class="btn" onclick="appendValue('5')">5</button>
+  <button style="background-color:blue;"  class="btn" onclick="appendValue('6')">6</button>
+  <button style="background-color:blue;"  class="btn" onclick="appendValue('*')">*</button><br>
+
+
+  <button style="background-color:blue;"  class="btn" onclick="appendValue('1')">1</button>
+  <button style="background-color:blue;"  class="btn" onclick="appendValue('2')">2</button>
+  <button style="background-color:blue;"  class="btn" onclick="appendValue('3')">3</button>
+  <button style="background-color:blue;"  class="btn" onclick="appendValue('-')">-</button><br>
+
+
+  <button style="background-color:blue;"  class="btn" onclick="appendValue('0')">0</button>
+  <button style="background-color:blue;"  class="btn" onclick="appendValue('.')">.</button>
+  <button style="background-color:blue;"   class="btn" onclick="calculate()">=</button>
+  <button style="background-color:blue;"  class="btn" onclick="appendValue('+')">+</button><br>
+
+
+  <button style="background-color:blue;"  class="btn" onclick="clearDisplay()">C</button>
+</div>
+
+
+<script>
+  function appendValue(val) {
+    document.getElementById("display").value += val;
+  }
+
+
+  function clearDisplay() {
+    document.getElementById("display").value = "";
+  }
+
+
+  function calculate() {
+    try {
+      document.getElementById("display").value = eval(document.getElementById("display").value);
+    } catch (e) {
+      alert("Invalid Expression");
+    }
+  }
+</script>
+
+
+</body>
+</html>
+
+
+

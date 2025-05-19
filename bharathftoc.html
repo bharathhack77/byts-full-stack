@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fahrenheit to Celsius</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+
+    }
+
+    label {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: white;
+      border: 2px solid red;
+      color: red;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: red;
+      color: white;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <label for="input1">Enter Fahrenheit:</label>
+  <input type="number" name="input1" id="input1">
+  <button onclick="converrt()">Fahrenheit to Celsius</button>
+  <p id="result"></p>
+
+  <script>
+    function converrt() {
+      let num1 = parseFloat(document.getElementById("input1").value);
+      if (isNaN(num1)) {
+        document.getElementById("result").innerText = "Please enter a valid number.";
+      } else {
+        let result = (num1 - 32) * 5 / 9;
+        document.getElementById("result").innerText = "Result: " + result.toFixed(2) + " °C";
+      }
+    }
+  </script>
+
+</body>
+</html>

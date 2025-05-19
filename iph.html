@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>iPhone 144p Clone</title>
+  <style>
+    body {
+      background: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
+    }
+
+    .iphone {
+      width: 375px;
+      height: 812px;
+      border: 16px solid black;
+      border-radius: 40px;
+      background: white;
+      position: relative;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+
+    .status-bar {
+      height: 20px;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+      font-size: 12px;
+      color: #333;
+      align-items: center;
+    }
+
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 40px 20px;
+      justify-items: center;
+    }
+
+    .app-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(to bottom right, #151616, #00f2fe);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .home-bar {
+      width: 120px;
+      height: 5px;
+      background: #ccc;
+      border-radius: 10px;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="iphone">
+    <div class="status-bar">
+      <div>9:41</div>
+      <div>📶 🔋</div>
+    </div>
+
+    <div class="apps">
+      <div class="app-icon">📱</div>
+      <div class="app-icon">📷</div>
+      <div class="app-icon">📞</div>
+      <div class="app-icon">📧</div>
+      <div class="app-icon">🗓️</div>
+      <div class="app-icon">🎵</div>
+      <div class="app-icon">📂</div>
+      <div class="app-icon">⚙️</div>
+    </div>
+
+    <div class="home-bar"></div>
+  </div>
+
+</body>
+</html>

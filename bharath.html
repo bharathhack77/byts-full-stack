@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1> <strong>clock</strong></h1>
+    <br>
+<button style="background-color: rgba(red, green, blue, alpha);" onclick="start()">start</button>
+<br>
+<button style="background-color: blueviolet;"onclick="stop()">stop</button>
+<br>
+<button style="background-color:ghostwhite;"onclick="reset()">reset</button>
+<p id="bharath"></p>
+<script>
+    let num=0 ,b;
+    function start()
+    {
+      b=setInterval(() => {
+        document.getElementById("bharath").innerHTML = num;
+        num++;
+      }, 1000);
+    }
+    function stop()
+    {
+
+     clearInterval(b);
+    }
+    function reset()
+    {
+     num=0;
+     clearInterval(b);
+    }
+</script>
+</body>
+
+</html>
